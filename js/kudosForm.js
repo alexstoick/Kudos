@@ -1,9 +1,11 @@
 
 	$("#kudosForm").submit ( function (event) {
 
+		event.preventDefault();
+
 		console.log (usersObject) ;
 
-		event.preventDefault();
+
 
 		var form = $( this ) ;
 		var skills = form.find( "input[name='skills']" ).val();

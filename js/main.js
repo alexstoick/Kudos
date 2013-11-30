@@ -1,3 +1,4 @@
+var userObject;
 function showHelpBox() {
 	$('#kudosSearchBox').hide();
 	$('#helpSearchBox').show();
@@ -13,10 +14,10 @@ function showKudosBox() {
 }
 $(document).ready(function() {
 	showKudosBox();
-	
+
 	$.getJSON("http://kudos.fwd.wf/person", function(data) {
-		alert(data);
 		var names = [];
+		usersObject = data ;
 		$.each(data, function(key, object) {
 			names.push(object["name"]);
 		});
