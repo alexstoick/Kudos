@@ -70,7 +70,7 @@ $('#helpPage').addClass('active');
   </div>
   
   <div class="input-group searchGroup"  id="kudosSearchBox">
-  <input type="text" class="form-control" placeholder="Type a name ...">
+  <input id="kudosSearchBoxInput" type="text" class="form-control" placeholder="Type a name ...">
     <span class="input-group-btn">
     <button class="btn btn-default" type="button">Kudos</button>
     </span>
@@ -93,5 +93,26 @@ $('#helpPage').addClass('active');
 <!-- Bootstrap core JavaScript
     ================================================== --> 
 <!-- Placed at the end of the document so the pages load faster -->
+ 
+    <script>
+      $.getJSON( "http://kudos.fwd.wf/person", function( data ) {
+          var names = [];
+          $.each( data, function( key , object ) {
+            names.push ( object["name"] );
+          });
+          console.log ( names );
+          $('#kudosSearchBoxInput').typeahead([
+            {
+              name: 'names',
+              local: names
+            }
+         ]);
+      });
+
+    </script>
+
+    <script src="js/typeahead.min.js"></script>
+
+
 </body>
 </html>
