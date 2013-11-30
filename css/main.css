@@ -10,6 +10,7 @@
 
 .twitter-typeahead {
 	width: 100%;
+	border-radius: 4px;
 }
 
 .searchGroup input,#kudosSearchBoxInput,#helpSearchBoxInput {
@@ -33,6 +34,30 @@
 	border-image-repeat: initial;
 }
 
+.searchGroup input:focus {
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px
+		rgba(102, 175, 233, 0.6);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px
+		rgba(102, 175, 233, 0.6);
+	-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px
+		rgba(102, 175, 233, 0.6);
+}
+
 .tt-dropdown-menu {
 	padding: 6px 12px;
+	font-size: 16pt;
+	background-clip: padding-box;
+	background-color: #FFFFFF;
+	width: 100%;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	list-style: none outside none;
+	min-width: 160px;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.footer {
+	text-align: center;
 }
