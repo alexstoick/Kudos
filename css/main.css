@@ -61,3 +61,22 @@
 .footer {
 	text-align: center;
 }
+
+.skillsTable {
+	width:45%;
+	float: left;
+}
+
+.departmentsTable {
+
+	width:45%;
+	padding-left:55%;
+	float:right ;
+
+}
+
+.tableSpace {
+
+	min-height:120px;
+
+}
