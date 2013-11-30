@@ -1,0 +1,9 @@
+.searchGroup {
+	margin-left: 15%;
+	margin-right: 15%;
+}
+
+.searchGroup input,.searchGroup button {
+	height: 55px;
+	font-size: 20pt;
+}

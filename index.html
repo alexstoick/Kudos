@@ -10,7 +10,9 @@
 <link rel="shortcut icon" href="/favicon.png">
 <link href="css/bootstrap.css" rel="stylesheet">
 <link href="css/justified-nav.css" rel="stylesheet">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<link href="css/main.css" rel="stylesheet">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 <title>Kudos</title>
 <!-- Just for debugging purposes. Don't actually copy this line! -->
 <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -20,99 +22,48 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
-<script type="text/javascript">
-function showHelpBox(){
-	$('#kudosSearchBox').hide();
-	$('#helpSearchBox').show();
-	$('#helpPage').addClass('active');
-	$('#kudosPage').removeClass('active');
-	
-}
-function showKudosBox(){
-	$('#kudosPage').addClass('active');
-	$('#helpPage').removeClass('active');
-	$('#kudosSearchBox').show();
-	$('#helpSearchBox').hide();
-}
-$( document ).ready(function() {
-$('#helpPage').addClass('active');
-    showKudosBox();
-  });
-</script>
+<script src="js/main.js"></script>
 </head>
 
 <body>
+	<div class="container">
+		<div class="masthead">
+			<h3 class="text-muted">Kudos</h3>
+			<ul class="nav nav-justified">
+				<li class="active" onclick="showKudosBox()" id="kudosPage"><a>Give
+						Kudos</a></li>
+				<li onclick="showHelpBox()" id="helpPage"><a>Find Help</a></li>
+				<li><a href="profile.html">Profile</a></li>
+			</ul>
+		</div>
 
-<style>
-.searchGroup{
-	margin-left:15%;
-	margin-right:15%;
-}
-.searchGroup input, .searchGroup button{
-	height: 55px;
-	font-size:20pt;
-}
-</style>
-<div class="container">
-  <div class="masthead">
-    <h3 class="text-muted">Kudos</h3>
-    <ul class="nav nav-justified">
-      <li class="active" onclick="showKudosBox()" id="kudosPage"><a >Give Kudos</a></li>
-      <li onclick="showHelpBox()"  id="helpPage" ><a>Find Help</a></li>
-      <li><a href="profile.html">Profile</a></li>
-    </ul>
-  </div>
-  
-  <!-- Jumbotron -->
-  <div class="jumbotron">
-    <h1>Welcome to Kudos!</h1>
-    <p class="lead">Use with care!Have fun...</p>
-  </div>
-  
-  <div class="input-group searchGroup"  id="kudosSearchBox">
-  <input id="kudosSearchBoxInput" type="text" class="form-control" placeholder="Type a name ...">
-    <span class="input-group-btn">
-    <button class="btn btn-default" type="button">Kudos</button>
-    </span>
-  </div>
-  
-  <div class="input-group searchGroup" id="helpSearchBox">
-  <input type="text" class="form-control" placeholder="Type a skill ...">
-    <span class="input-group-btn">
-    <button class="btn btn-default" type="button">Get Help</button>
-    </span>
-  </div>
-  
-  
-  <!-- Site footer -->
-  <div class="footer">
-    <p>© Kudos 2013</p>
-  </div>
-</div>
-<!-- /container --> 
-<!-- Bootstrap core JavaScript
-    ================================================== --> 
-<!-- Placed at the end of the document so the pages load faster -->
- 
-    <script>
-      $.getJSON( "http://kudos.fwd.wf/person", function( data ) {
-          var names = [];
-          $.each( data, function( key , object ) {
-            names.push ( object["name"] );
-          });
-          console.log ( names );
-          $('#kudosSearchBoxInput').typeahead([
-            {
-              name: 'names',
-              local: names
-            }
-         ]);
-      });
+		<div class="jumbotron">
+			<h1>Welcome to Kudos!</h1>
+			<p class="lead">Use with care!Have fun...</p>
+		</div>
 
-    </script>
+		<div class="input-group searchGroup" id="kudosSearchBox">
+			<input id="kudosSearchBoxInput" type="text"
+				class="dropdown-toggle" placeholder="Type a name ..."> <span
+				class="input-group-btn">
+				<button class="btn btn-default" type="button">Kudos</button>
+			</span>
+		</div>
 
-    <script src="js/typeahead.min.js"></script>
+		<div class="input-group searchGroup" id="helpSearchBox">
+			<input type="text" class="form-control"
+				placeholder="Type a skill ..."> <span
+				class="input-group-btn">
+				<button class="btn btn-default" type="button">Get Help</button>
+			</span>
+		</div>
 
 
+		<!-- Site footer -->
+		<div class="footer">
+			<p>© Kudos 2013</p>
+		</div>
+	</div>
+	<!-- /container --><script src="js/typeahead.min.js"></script>
 </body>
 </html>
