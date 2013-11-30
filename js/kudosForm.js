@@ -5,12 +5,11 @@
 
 		event.preventDefault();
 
-		// Get some values from elements on the page:
 		var form = $( this ) ;
 		var skills = form.find( "input[name='skills']" ).val();
 		var personName = form.find( "input[name='personName']" ).val();
 
-
+		console.log ( personName ) ;
 		var receiver_id = 1 ;
 
 		$.each(usersObject, function(key, object) {

@@ -11,6 +11,7 @@
 <link href="css/bootstrap.css" rel="stylesheet">
 <link href="css/justified-nav.css" rel="stylesheet">
 <link href="css/main.css" rel="stylesheet">
+
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 <title>Kudos</title>
@@ -25,10 +26,10 @@
 
 </head>
 
-<body>
+<body><!-- style="background-color: #f5f4f0">-->
 	<div class="container">
 		<div class="masthead">
-			<h3 class="text-muted">Kudos</h3>
+			<img src="logo.png" height="70px">
 			<ul class="nav nav-justified">
 				<li class="active" onclick="showKudosBox()" id="kudosPage"><a>Give
 						Kudos</a></li>
@@ -38,14 +39,16 @@
 		</div>
 
 		<div class="jumbotron">
-			<h1>Welcome to Kudos!</h1>
-			<p class="lead">Use with care!Have fun...</p>
+			<img src="image1.jpg" height="100px">
 		</div>
 
 		<div class="input-group searchGroup" id="kudosSearchBox">
-			<input id="kudosSearchBoxInput" type="text" class="dropdown-toggle" placeholder="Type a name ..."> <span class="input-group-btn">
-				<button class="btn btn-default" type="button">Kudos</button>
-			</span>
+			<form id="kudosForm">
+				<input id="kudosSearchBoxInput" type="text" class="dropdown-toggle" placeholder="Type a name ..." name="personName">
+				<input type="text" name="skills" placeholder="Enter skills ...">
+				<span class="input-group-btn">
+					<button class="btn btn-default" type="submit">Kudos</button>
+				</span>
 		</div>
 
 		<div class="input-group searchGroup" id="helpSearchBox">
@@ -63,8 +66,9 @@
 		</div>
 	</div>
 	<!-- /container -->
+	<script src="js/kudosForm.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/typeahead.min.js"></script>
-	
+
 </body>
 </html>
