@@ -13,17 +13,16 @@ function showKudosBox() {
 }
 $(document).ready(function() {
 	showKudosBox();
+	
 	$.getJSON("http://kudos.fwd.wf/person", function(data) {
+		alert(data);
 		var names = [];
 		$.each(data, function(key, object) {
 			names.push(object["name"]);
 		});
-		console.log(names);
 		$('#kudosSearchBoxInput').typeahead([ {
 			name : 'names',
 			local : names
 		} ]);
 	});
 });
-
-
