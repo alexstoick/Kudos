@@ -1,14 +1,3 @@
-$.getJSON("http://kudos.fwd.wf/person", function(data) {
-	var names = [];
-	$.each(data, function(key, object) {
-		names.push(object["name"]);
-	});
-	console.log(names);
-	$('#kudosSearchBoxInput').typeahead([ {
-		name : 'names',
-		local : names
-	} ]);
-});
 function showHelpBox() {
 	$('#kudosSearchBox').hide();
 	$('#helpSearchBox').show();
@@ -23,6 +12,18 @@ function showKudosBox() {
 	$('#helpSearchBox').hide();
 }
 $(document).ready(function() {
-	$('#helpPage').addClass('active');
 	showKudosBox();
+	$.getJSON("http://kudos.fwd.wf/person", function(data) {
+		var names = [];
+		$.each(data, function(key, object) {
+			names.push(object["name"]);
+		});
+		console.log(names);
+		$('#kudosSearchBoxInput').typeahead([ {
+			name : 'names',
+			local : names
+		} ]);
+	});
 });
+
+
