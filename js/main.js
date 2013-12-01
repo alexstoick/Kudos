@@ -45,7 +45,6 @@ function() {
 			matcher : function(term, text) {
 				return text;
 			},
-			closeOnSelect : true,
 			containerCssClass : 'selectSearch',
 
 		});
@@ -57,9 +56,9 @@ function() {
 	});
 
 	$('#kudosSearchBoxSkills').on("select2-selecting", function(e) {
-		if ($("#kudosSearchBoxSkills").select2("val").length > 0) {
-			$('#kudosSearchBox button').removeAttr("disabled");
-		}
+		//if ($("#kudosSearchBoxSkills").select2("val").length > 0) {
+			//$('#kudosSearchBox button').removeAttr("disabled");
+		//}
 		// alert($("#kudosSearchBoxSkills").select2("val").join(" "));
 	});
 
