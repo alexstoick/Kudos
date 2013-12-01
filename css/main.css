@@ -8,6 +8,10 @@
 	position: relative;
 }
 
+.input-group {
+	max-height: 40px !important;
+}
+
 #kudosSearchBox button {
 	float: right;
 	height: 42px;
@@ -15,7 +19,32 @@
 	border-bottom-left-radius: 0px !important;
 }
 
-.selectSearch,.select2-choice {
+#selectedUser {
+	height: 42px;
+	border-top-right-radius: 0px !important;
+	border-bottom-right-radius: 0px !important;
+	color: #333333;
+	background-color: #ffffff;
+	border-color: #cccccc;
+	border-top-right-radius: 0px !important;
+}
+
+#selectedUser:hover {
+	color: #333333;
+	background-color: #ffffff;
+	border-color: #cccccc;
+}
+.select2-choices{
+	min-height: 40p;
+	height: 40px;
+	max-height: 40px;
+	border-top-left-radius: 0px !important;
+	border-bottom-left-radius: 0px !important;
+	border-top-right-radius: 0px !important;
+	border-bottom-right-radius: 0px !important;
+	padding-left: 56px;
+}
+.selectSearch, .select2-choice {
 	border-top-left-radius: 4px !important;
 	border-bottom-left-radius: 4px !important;
 	border-top-right-radius: 0px !important;
@@ -32,12 +61,6 @@
 .skillsTable {
 	width: 45%;
 	float: left;
-}
-
-#selectedUser:hover {
-	color: #333333;
-	background-color: #ffffff;
-	border-color: #cccccc;
 }
 
 }
