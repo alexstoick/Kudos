@@ -1,6 +1,7 @@
 var visualization_data = [];
 google.load("visualization", "1", {packages:["corechart"]});
 google.setOnLoadCallback(drawChart);
+
 $(document).ready(function(){
 	$('#myModal').modal(options);
 	console.log(food);
@@ -38,7 +39,7 @@ $(document).ready(function(){
 
 		console.log("test");
 		console.log(visualization_data);
-		data = new google.visualization.arrayToDataTable(visualization_data); 
+		data = new google.visualization.arrayToDataTable(visualization_data);
 		var options = {
 			title: 'Kudos Breakdown by Department',
 			'width': 700,

@@ -10,9 +10,9 @@
 <link rel="shortcut icon" href="/favicon.png">
 <link href="css/bootstrap.css" rel="stylesheet">
 <link href="css/justified-nav.css" rel="stylesheet">
-<link href="css/main.css" rel="stylesheet">
 <link href="css/select2.css" rel="stylesheet">
 <link href="css/select2-bootstrap.css" rel="stylesheet">
+<link href="css/main.css" rel="stylesheet">
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
@@ -33,12 +33,12 @@
 		<div class="masthead">
 			<a href="index.html"> <img src="images/logo.png" alt="Kudos Logo"
 				height="70px"></a>
-			<ul class="main-nav-tabs"><!--nav nav-justified">-->
-				<li  class="active" onclick="switchTabs('kudos')" id="kudosPage"> <!-- style="background-image:url('images/redpattern.jpg')" -->
-
-					<a href="index.html#">Give
-						Kudos</a></li>
-				<li onclick="switchTabs('help')" id="helpPage"><a href="index.html#help">Find Help</a></li>
+			<ul class="nav nav-justified">
+				<li class="active" onclick="switchTabs('kudos')" id="kudosPage"><a
+					href="index.html#">Give Kudos</a></li>
+				<li onclick="switchTabs('help')" id="helpPage"><a
+					href="index.html#help">Find Help</a></li>
+				<li><a href="leaderboard.html#">Leaderboard</a></li>
 				<li><a href="profile.html#">Profile</a></li>
 			</ul>
 		</div>
@@ -49,13 +49,17 @@
 
 		<div class="input-group searchGroup" id="kudosSearchBox">
 			<form id="kudosForm" action="#" method="POST">
-				<input id="kudosSearchBoxInput" type="text" class="dropdown-toggle"
-					placeholder="Type a name ..." name="personName"> <input
-					id="kudosSearchBoxSkills" class="dropdown-toggle" type="text"
-					name="skills" placeholder="Enter skills ..." style="display: none;">
-				<span class="input-group-btn">
-					<button class="btn btn-default" type="submit">Kudos</button>
-				</span>
+				<button class="btn btn-default" type="submit">Kudos</button>
+				<input id="kudosSearchBoxInput" type="text"
+					class="dropdown-toggle form-control" placeholder="Type a name ..."
+					name="personName">
+				<div class="input-group">
+					<span id="selectedUser" class="input-group-addon"
+						style="display: none;"> </span> <input id="kudosSearchBoxSkills"
+						class="dropdown-toggle form-control" type="text" name="skills"
+						placeholder="Enter skills ..." style="display: none;">
+				</div>
+			</form>
 		</div>
 
 		<div class="input-group searchGroup" id="helpSearchBox">
@@ -101,26 +105,34 @@
 	-->
 
 	<!-- Modal -->
-	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	  <div class="modal-dialog">
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-	        
-	        <h4 class="modal-title" id="myModalLabel">Welcome to Kudos</h4>
-	        <img src="images/logo.png" alt="Kudos Logo" height="30px">
-	      </div>
-	      <div style="margin-left: 120px; margin-top: 15px">
-		      <input style="border-radius: 4px; width: 300px; margin-bottom: 5px;" type = "text" placeholder="Username">
-		      <input style="border-radius: 4px; width: 300px"type = "text" placeholder="Password">
-	      </div>
-	      <div class="modal-footer">
-	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-	        <button type="button" class="btn btn-primary" data-dismiss="modal">Login</button>
-	      </div>
-	    </div><!-- /.modal-content -->
-	  </div><!-- /.modal-dialog -->
-	</div><!-- /.modal -->
+	<div class="modal fade" id="loginMask" tabindex="-1" role="dialog"
+		aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog" id="loginModal">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-hidden="true">&times;</button>
+
+					<h4 class="modal-title" id="myModalLabel">Welcome to Kudos</h4>
+					<img src="images/logo.png" alt="Kudos Logo" height="30px">
+				</div>
+				<div style="margin-left: 120px; margin-top: 15px">
+					<input
+						style="border-radius: 4px; width: 300px; margin-bottom: 5px;"
+						type="text" placeholder="Username"> <input
+						style="border-radius: 4px; width: 300px" type="text"
+						placeholder="Password">
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary" data-dismiss="modal">Login</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
 
 
 	<!-- /.modal -->
