@@ -45,7 +45,9 @@
 }
 
 .select2-container-multi .select2-choices .select2-search-choice {
-	margin-top: 15px !important;
+	margin-top: 10px !important;
+	padding-top: 8px !important;
+	padding-bottom: 5px !important;
 }
 
 .selectSearch,.select2-choice {
