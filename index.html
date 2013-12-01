@@ -15,6 +15,7 @@
 <link href="css/select2-bootstrap.css" rel="stylesheet">
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 <title>Kudos</title>
 <!-- Just for debugging purposes. Don't actually copy this line! -->
 <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -27,10 +28,11 @@
 
 </head>
 
-<body><!-- style="background-color: #f5f4f0">-->
+<body>
 	<div class="container">
 		<div class="masthead">
-			<img src="logo.png" height="70px">
+			<a href="index.html"> <img src="images/logo.png" alt="Kudos Logo"
+				height="70px"></a>
 			<ul class="nav nav-justified">
 				<li class="active" onclick="showKudosBox()" id="kudosPage"><a>Give
 						Kudos</a></li>
@@ -40,13 +42,15 @@
 		</div>
 
 		<div class="jumbotron">
-			<img src="image1.jpg" height="100px">
+			<img src="images/minilogo.png" height="100px">
 		</div>
 
 		<div class="input-group searchGroup" id="kudosSearchBox">
 			<form id="kudosForm" action="#" method="POST">
-				<input id="kudosSearchBoxInput" type="text" class="dropdown-toggle" placeholder="Type a name ..." name="personName">
-				<input type="text" name="skills" placeholder="Enter skills ...">
+				<input id="kudosSearchBoxInput" type="text" class="dropdown-toggle"
+					placeholder="Type a name ..." name="personName"> <input
+					id="kudosSearchBoxSkills" class="dropdown-toggle" type="text"
+					name="skills" placeholder="Enter skills ..." style="display: none;">
 				<span class="input-group-btn">
 					<button class="btn btn-default" type="submit">Kudos</button>
 				</span>
@@ -61,15 +65,35 @@
 		</div>
 
 
+
 		<!-- Site footer -->
 		<div class="footer">
 			<p>© Kudos 2013</p>
 		</div>
 	</div>
 	<!-- /container -->
+
+	<div class="modal fade" id="warningModal" tabindex="-1" role="dialog"
+		aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-hidden="true">&times;</button>
+					<h4 class="modal-title">Warning</h4>
+				</div>
+				<div class="modal-body">Please select at least one skill!</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
 	<script src="js/kudosForm.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/select2.min.js"></script>
-	<script src="js/typeahead.min.js"></script>
 </body>
 </html>

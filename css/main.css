@@ -1,8 +1,9 @@
 .searchGroup {
 	margin-left: 15%;
 	margin-right: 15%;
+	width: 65%;
 }
-
+/*
 .searchGroup input,.searchGroup button {
 	height: 55px;
 	font-size: 20pt;
@@ -32,9 +33,14 @@
 	border-image-width: initial;
 	border-image-outset: initial;
 	border-image-repeat: initial;
+	
+}
+*/
+.select2-container,#s2id_kudosSearchBoxInput,.dropdown-toggle {
+	width: 100%;
 }
 
-.searchGroup input:focus {
+.searchGroup .select2-choice:focus {
 	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px
 		rgba(102, 175, 233, 0.6);
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px
@@ -43,19 +49,40 @@
 		rgba(102, 175, 233, 0.6);
 }
 
-.tt-dropdown-menu {
+.select2-choice {
+	/*width: 100%;
+	height: 55px;
 	padding: 6px 12px;
 	font-size: 16pt;
 	background-clip: padding-box;
 	background-color: #FFFFFF;
-	width: 100%;
 	border: 1px solid rgba(0, 0, 0, 0.2);
 	border-bottom-left-radius: 4px;
 	border-bottom-right-radius: 4px;
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 	list-style: none outside none;
-	min-width: 160px;
-	border: 1px solid rgba(0, 0, 0, 0.2);
+	border: 1px solid rgba(0, 0, 0, 0.2);*/
+	min-height: 40px;
+	
+}
+/*
+.select2-container .select2-choice div {
+	display: inline;
+	height: 50px;
+	width: 100%;
+	font-size: 32pt;
+	background: white;
+	background-color: white;
+}*/
+
+
+.selectSearch{
+	background-color: white;
+	display: inline;
+	width: 100%;
+	font-size: 20pt;
+	background: white;
+	background-color: transparent;
 }
 
 .footer {
@@ -63,7 +90,7 @@
 }
 
 .skillsTable {
-	width:45%;
+	width: 45%;
 	float: left;
 }
 
@@ -76,7 +103,5 @@
 }
 
 .tableSpace {
-
-	min-height:120px;
-
+	min-height: 120px;
 }
