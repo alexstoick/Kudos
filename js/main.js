@@ -15,9 +15,11 @@ function showKudosBox() {
 	$('#helpSearchBox').hide();
 }
 
+$('#myModal').modal('show');
+
 $(document).ready(
 
-function() {
+function() {	
 	showKudosBox();
 	$.getJSON("http://kudos.fwd.wf/person", function(data) {
 		usersObject = data;
