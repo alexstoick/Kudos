@@ -1,26 +1,29 @@
 var userObject;
 
-function showHelpBox() {
-	$('#kudosSearchBox').hide();
-	$('#helpSearchBox').show();
-	$('#helpPage').addClass('active');
-	$('#kudosPage').removeClass('active');
-
-}
-
-function showKudosBox() {
-	$('#kudosPage').addClass('active');
-	$('#helpPage').removeClass('active');
-	$('#kudosSearchBox').show();
-	$('#helpSearchBox').hide();
+function switchTabs(page) {
+	if (page == 'help') {
+		$('#kudosSearchBox').hide();
+		$('#helpSearchBox').show();
+		$('#helpPage').addClass('active');
+		$('#kudosPage').removeClass('active');
+	} else {
+		$('#kudosPage').addClass('active');
+		$('#helpPage').removeClass('active');
+		$('#kudosSearchBox').show();
+		$('#helpSearchBox').hide();
+	}
 }
 
 $('#myModal').modal('show');
 
 $(document).ready(
 
-function() {	
-	showKudosBox();
+function() {
+	if (document.URL.indexOf("help") !== -1) {
+		switchTabs('help');
+	} else {
+		switchTabs('kudos');
+	}
 	$.getJSON("http://kudos.fwd.wf/person", function(data) {
 		usersObject = data;
 		var users = [];
@@ -58,9 +61,9 @@ function() {
 	});
 
 	$('#kudosSearchBoxSkills').on("select2-selecting", function(e) {
-		//if ($("#kudosSearchBoxSkills").select2("val").length > 0) {
-			//$('#kudosSearchBox button').removeAttr("disabled");
-		//}
+		// if ($("#kudosSearchBoxSkills").select2("val").length > 0) {
+		// $('#kudosSearchBox button').removeAttr("disabled");
+		// }
 		// alert($("#kudosSearchBoxSkills").select2("val").join(" "));
 	});
 

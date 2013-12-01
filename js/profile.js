@@ -1,7 +1,10 @@
 var visualization_data = [];
 google.load("visualization", "1", {packages:["corechart"]});
 google.setOnLoadCallback(drawChart);
-
+$(document).ready(function(){
+	$('#myModal').modal(options);
+	console.log(food);
+});
 
 
  function drawChart() {
