@@ -6,7 +6,9 @@
 .searchGroup input,#kudosSearchBox,#helpSearchBox {
 	width: 100%;
 }
-
+.modal, .modal.fade.in {
+    padding-top: 15%; /* was 10% */
+}
 #kudosSearchBox button, #helpSearchBox button {
 	float: right;
 	height: 42px;
