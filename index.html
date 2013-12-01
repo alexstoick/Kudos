@@ -57,25 +57,28 @@
 					<span id="selectedUser" class="input-group-addon"
 						style="display: none;"> </span> <input id="kudosSearchBoxSkills"
 						class="dropdown-toggle form-control" type="text" name="skills"
-						placeholder="Enter skills ..." style="display: none;">
+						style="display: none;" placeholder="Enter skills ...">
 				</div>
 			</form>
 		</div>
 
 		<div class="input-group searchGroup" id="helpSearchBox">
-			<input type="text" class="form-control"
-				placeholder="Type a skill ..."> <span
-				class="input-group-btn">
-				<button class="btn btn-default" type="button">Get Help</button>
-			</span>
+			<form id="helpForm" action="#" method="POST">
+				<button class="btn btn-default" type="submit">Get Help</button>
+				<input id="helpSearchBoxInput" type="text"
+					class="dropdown-toggle form-control" placeholder="Type a skill ..."
+					name="skills">
+			</form>
 		</div>
 
+	</div>
 
 
-		<!-- Site footer -->
-		<div class="footer">
-			<p>© Kudos 2013</p>
-		</div>
+
+	<!-- Site footer -->
+	<div class="footer">
+		<p>© Kudos 2013</p>
+	</div>
 	</div>
 	<!-- /container -->
 

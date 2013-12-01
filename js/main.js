@@ -54,6 +54,7 @@ $(document).ready(function() {
 			tags : data,
 			width : 'resolve',
 			multiple : true,
+			maximumSelectionSize: 5,
 			matcher : function(term, text) {
 				return text;
 			},
