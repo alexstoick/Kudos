@@ -20,5 +20,6 @@ $("#kudosForm").submit(
 				$("#kudosSearchBoxSkills").select2('val', 'All');
 				$('#kudosSearchBoxInput').select2("container").show();
 				$('#kudosSearchBoxSkills').select2("container").hide();
+				$("#selectedUser").hide();
 			});
 		});
