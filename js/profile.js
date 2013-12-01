@@ -2,6 +2,12 @@ var visualization_data = [];
 google.load("visualization", "1", {packages:["corechart"]});
 google.setOnLoadCallback(drawChart);
 
+$(document).ready(function(){
+	$('#myModal').modal(options);
+	console.log(food);
+});
+
+
  function drawChart() {
  	var data;
  	$.getJSON("http://kudos.fwd.wf/person/1", function(data) {

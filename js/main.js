@@ -14,9 +14,11 @@ function switchTabs(page) {
 	}
 }
 
-$(document).ready(
+$(document).ready(function() {
+	if (document.URL.indexOf("#") === -1) {
+		$('#myModal').modal('show');
+	}
 
-function() {
 	if (document.URL.indexOf("help") !== -1) {
 		switchTabs('help');
 	} else {
