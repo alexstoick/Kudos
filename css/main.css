@@ -7,7 +7,7 @@
 	width: 100%;
 }
 .modal, .modal.fade.in {
-    padding-top: 15%; /* was 10% */
+    padding-top: 15%;
 }
 #kudosSearchBox button, #helpSearchBox button {
 	float: right;
