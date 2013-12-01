@@ -15,15 +15,22 @@ function showKudosBox() {
 $(document).ready(function() {
 	showKudosBox();
 
+
 	$.getJSON("http://kudos.fwd.wf/person", function(data) {
-		var names = [];
-		usersObject = data ;
+		var users = [];
+		usersObject = data;
 		$.each(data, function(key, object) {
-			names.push(object["name"]);
+			users.push( { "text":object["name"],"id":object["id"]});
 		});
-		$('#kudosSearchBoxInput').typeahead([ {
-			name : 'names',
-			local : names
-		} ]);
+		
+		$("#kudosSearchBoxInput").select2({
+			data : users,
+			width: 'resolve'
+		});
+
+		/*
+		 * $('#kudosSearchBoxInput').typeahead([ { name : 'names', local : names }
+		 * ]);
+		 */
 	});
 });

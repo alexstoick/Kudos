@@ -1,41 +1,36 @@
+$("#kudosForm").submit(function(event) {
 
-	$("#kudosForm").submit ( function (event) {
+	event.preventDefault();
+	console.log(usersObject);
+	var form = $(this);
+	var skills = form.find("input[name='skills']").val();
+	var personName = form.find("input[name='personName']").val();
 
-		event.preventDefault();
+	console.log(personName);
+	var receiver_id = 1;
 
-		console.log (usersObject) ;
+	$.each(usersObject, function(key, object) {
+		if (object["name"] == personName) {
+			receiver_id = object["id"];
+		}
+	});
 
+	console.log("receiver_id " + receiver_id);
 
+	var data = {
+		"skills" : skills,
+		"sender" : 2
+	};
 
-		var form = $( this ) ;
-		var skills = form.find( "input[name='skills']" ).val();
-		var personName = form.find( "input[name='personName']" ).val();
+	var url = "http://kudos.fwd.wf/person/" + receiver_id;
 
-		console.log ( personName ) ;
-		var receiver_id = 1 ;
+	var postAction = $.post(url, data);
 
-		$.each(usersObject, function(key, object) {
-			if ( object["name"] == personName )
-			{
-				receiver_id = object["id"] ;
-			}
-		} );
+	postAction.done(function(data) {
+		// Clear form
+		console.log(data);
+	});
 
-		console.log ( "receiver_id " +receiver_id ) ;
+	console.log(skills + " " + personName);
 
-		var data = { "skills" : skills , "sender" : 2 } ;
-
-		var url = "http://kudos.fwd.wf/person/" + receiver_id ;
-
-		var postAction = $.post ( url , data ) ;
-
-		postAction.done(function( data ) {
-			console.log ( data ) ;
-		});
-
-
-		console.log ( skills + " " + personName ) ;
-
-
-
-	}) ;
+});

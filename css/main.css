@@ -2,7 +2,7 @@
 	margin-left: 15%;
 	margin-right: 15%;
 }
-
+/*
 .searchGroup input,.searchGroup button {
 	height: 55px;
 	font-size: 20pt;
@@ -12,10 +12,10 @@
 	width: 100%;
 	border-radius: 4px;
 }
-
+*/
 .searchGroup input,#kudosSearchBoxInput,#helpSearchBoxInput {
 	width: 100%;
-	padding: 6px 12px;
+	/*padding: 6px 12px;
 	vertical-align: middle;
 	background-color: #ffffff;
 	-webkit-box-sizing: border-box;
@@ -31,7 +31,7 @@
 	border-image-slice: initial;
 	border-image-width: initial;
 	border-image-outset: initial;
-	border-image-repeat: initial;
+	border-image-repeat: initial;*/
 }
 
 .searchGroup input:focus {
@@ -43,7 +43,9 @@
 		rgba(102, 175, 233, 0.6);
 }
 
-.tt-dropdown-menu {
+.select2-choice {
+	height: 55px;
+	font-size: 20pt;
 	padding: 6px 12px;
 	font-size: 16pt;
 	background-clip: padding-box;
