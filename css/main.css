@@ -1,86 +1,27 @@
-.searchGroup {
+.searchGroup form {
 	margin-left: 15%;
 	margin-right: 15%;
-	width: 65%;
-}
-/*
-.searchGroup input,.searchGroup button {
-	height: 55px;
-	font-size: 20pt;
 }
 
-.twitter-typeahead {
+.searchGroup input,#kudosSearchBox,#helpSearchBox {
 	width: 100%;
-	border-radius: 4px;
-}
-
-.searchGroup input,#kudosSearchBoxInput,#helpSearchBoxInput {
-	width: 100%;
-	padding: 6px 12px;
-	vertical-align: middle;
-	background-color: #ffffff;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	padding: 6px 12px;
-	border-top-left-radius: 4px;
-	border-bottom-left-radius: 4px;
-	background-color: white;
-	border: 2px inset;
-	border-image-source: initial;
-	border-image-slice: initial;
-	border-image-width: initial;
-	border-image-outset: initial;
-	border-image-repeat: initial;
-	
-}
-*/
-.select2-container,#s2id_kudosSearchBoxInput,.dropdown-toggle {
-	width: 80%;
 	position: relative;
 }
 
-.searchGroup .select2-choice:focus {
-	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px
-		rgba(102, 175, 233, 0.6);
-	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px
-		rgba(102, 175, 233, 0.6);
-	-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px
-		rgba(102, 175, 233, 0.6);
+#kudosSearchBox button {
+	float: right;
+	height: 42px;
+	border-top-left-radius: 0px !important;
+	border-bottom-left-radius: 0px !important;
 }
 
-.select2-choice {
-	display: inline;
-	/*width: 100%;
-	height: 55px;
-	padding: 6px 12px;
-	font-size: 16pt;
-	background-clip: padding-box;
-	background-color: #FFFFFF;
-	border: 1px solid rgba(0, 0, 0, 0.2);
-	border-bottom-left-radius: 4px;
-	border-bottom-right-radius: 4px;
-	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-	list-style: none outside none;
-	border: 1px solid rgba(0, 0, 0, 0.2);*/
-	min-height: 40px;
-}
-/*
-.select2-container .select2-choice div {
-	display: inline;
-	height: 50px;
-	width: 100%;
-	font-size: 32pt;
-	background: white;
-	background-color: white;
-}*/
-.selectSearch {
-	background-color: white;
-	display: inline;
-	width: 80%;
+.selectSearch,.select2-choice {
+	border-top-left-radius: 4px !important;
+	border-bottom-left-radius: 4px !important;
+	border-top-right-radius: 0px !important;
+	border-bottom-right-radius: 0px !important;
 	font-size: 20pt;
-	background: white;
+	min-height: 40px;
 	background-color: transparent;
 }
 
@@ -93,6 +34,13 @@
 	float: left;
 }
 
+#selectedUser:hover {
+	color: #333333;
+	background-color: #ffffff;
+	border-color: #cccccc;
+}
+
+}
 .departmentsTable {
 	width: 45%;
 	padding-left: 55%;

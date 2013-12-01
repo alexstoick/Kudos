@@ -13,10 +13,17 @@ function switchTabs(page) {
 		$('#helpSearchBox').hide();
 	}
 }
+$('#loginModal').on('show.bs.modal', function() {
+	$('#loginMask').modal('show');
+});
 
 $(document).ready(function() {
 	if (document.URL.indexOf("#") === -1) {
-		$('#myModal').modal('show');
+		$('#loginModal').modal({
+			backdrop : false,
+			keyboard : false,
+		});
+
 	}
 
 	if (document.URL.indexOf("help") !== -1) {
@@ -57,6 +64,8 @@ $(document).ready(function() {
 	$('#kudosSearchBoxInput').on('select2-selected', function(e) {
 		$('#kudosSearchBoxInput').select2("container").hide();
 		$('#kudosSearchBoxSkills').select2("container").show();
+		$("#selectedUser").text($("#kudosSearchBoxInput").select2("data").text);
+		$("#selectedUser").show();
 		$('#kudosSearchBox button').show();
 	});
 
@@ -66,5 +75,4 @@ $(document).ready(function() {
 		// }
 		// alert($("#kudosSearchBoxSkills").select2("val").join(" "));
 	});
-
 });
