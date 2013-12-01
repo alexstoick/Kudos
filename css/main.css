@@ -3,13 +3,20 @@
 	margin-right: 15%;
 }
 
+#helpFormTable {
+	margin-left: 15%;
+	margin-right: 15%;
+}
+
 .searchGroup input,#kudosSearchBox,#helpSearchBox {
 	width: 100%;
 }
-.modal, .modal.fade.in {
-    padding-top: 15%;
+
+.modal,.modal.fade.in {
+	padding-top: 15%;
 }
-#kudosSearchBox button, #helpSearchBox button {
+
+#kudosSearchBox button,#helpSearchBox button {
 	float: right;
 	height: 42px;
 	border-top-left-radius: 0px !important;
