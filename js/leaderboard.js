@@ -13,7 +13,7 @@ function startLoadingJSON () {
 							'</a>' +
 						'</h4>' +
 					'</div>'+
-					'<div id="' + object["id"] +'" class="panel-collapse collapse in">' +
+					'<div id="' + object["id"] +'" class="panel-collapse collapse">' +
 						'<div class="panel-body">' +
 							'<div class="tableSpace">' +
 
