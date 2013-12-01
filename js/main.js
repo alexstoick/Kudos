@@ -14,11 +14,11 @@ function switchTabs(page) {
 	}
 }
 
-$('#myModal').modal('show');
+$(document).ready(function() {
+	if (document.URL.indexOf("#") === -1) {
+		$('#myModal').modal('show');
+	}
 
-$(document).ready(
-
-function() {
 	if (document.URL.indexOf("help") !== -1) {
 		switchTabs('help');
 	} else {
