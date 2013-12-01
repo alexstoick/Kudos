@@ -1,0 +1,43 @@
+.skillsTable {
+
+	margin: 10px 0;	
+	width: 45%;
+	float: left;
+	text-align: center;
+
+
+}
+
+.skillsTable > tbody > tr:nth-child(odd) > td,
+.skillsTable > tbody > tr:nth-child(odd) > th {
+  background-color: #f9f9f9;
+}
+
+
+.departmentsTable {
+
+	margin: 10px 0;
+	width: 45%;
+	padding-left: 0%;
+	float: right ;
+	text-align: center;	
+
+}
+
+.departmentsTable > tbody > tr:nth-child(odd) > td,
+.departmentsTable > tbody > tr:nth-child(odd) > th {
+  background-color: #f9f9f9;
+}
+
+
+.greeting {
+	text-align: center;
+}
+
+
+.footer {
+	margin-top: 500px;
+	text-align: center;
+	clear: both;
+}
+

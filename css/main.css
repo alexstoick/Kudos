@@ -95,9 +95,11 @@
 }
 
 .departmentsTable {
+
 	width: 45%;
 	padding-left: 55%;
-	float: right;
+	float: right ;
+
 }
 
 .tableSpace {
