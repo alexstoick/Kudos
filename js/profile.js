@@ -2,8 +2,6 @@ var visualization_data = [];
 google.load("visualization", "1", {packages:["corechart"]});
 google.setOnLoadCallback(drawChart);
 
-
-
  function drawChart() {
  	var data;
  	$.getJSON("http://kudos.fwd.wf/person/1", function(data) {
@@ -35,7 +33,7 @@ google.setOnLoadCallback(drawChart);
 
 		console.log("test");
 		console.log(visualization_data);
-		data = new google.visualization.arrayToDataTable(visualization_data); 
+		data = new google.visualization.arrayToDataTable(visualization_data);
 		var options = {
 			title: 'Kudos Breakdown by Department',
 			'width': 700,
