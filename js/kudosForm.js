@@ -1,6 +1,6 @@
 $("#kudosForm").submit(
 		function(event) {
-			if ($("#kudosSearchBoxSkills").select2("val").length < 1) {
+			if ($("#kudosSearchBoxSkills").select2("val").length < 1) { 
 				$('#warningModal').modal('show');
 				return false;
 			}
